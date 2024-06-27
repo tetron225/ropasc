@@ -77,7 +77,7 @@ const playGame = () => {
     } else if(humanScore < computerScore) {
         console.log("You lose this round")
     } else {
-        console.log("Its a tie");
+        console.log("Its a tie this round");
     }
 }
 
