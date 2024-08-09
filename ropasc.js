@@ -64,13 +64,20 @@ const playRound = (humanChoice, computerChoice) => {
 }
 
 const playGame = () => {
-    console.log("Playing 5 rounds!");
+    /*console.log("Playing 5 rounds!");
     for(let i = 1; i < 6; i++) {
         let person = prompt("Please enter rock, paper or, scissors");
         const humanSelect = getHumanChoice(person);
         const computerSelect = getComputerChoice();
         playRound(humanSelect, computerSelect);
-    }
+    }*/
+
+    const rock = document.createElement("button");
+    rock.setAttribute("id", "rock");
+    const paper = document.createElement("button");
+    paper.setAttribute("id", "paper");
+    const scissor = document.createElement("button");
+    scissor.setAttribute("id", "scissor");
 
     if(humanScore > computerScore) {
         console.log("You win this round!")
@@ -84,6 +91,5 @@ const playGame = () => {
 let humanScore = 0;
 let computerScore = 0;
 
-
-playGame();
-console.log("DONE!")
+const clickButton = document.querySelector("#play");
+clickButton.addEventListener("click", playGame);
